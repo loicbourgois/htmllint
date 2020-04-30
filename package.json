@@ -15,7 +15,9 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/gulp/bin/gulp.js travis",
-    "testlocal": "gulp test"
+    "testlocal": "gulp test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "ISC",
   "devDependencies": {
@@ -40,7 +42,8 @@
     "bulk-require": "^1.0.1",
     "htmlparser2": "^3.9.2",
     "lodash": "^4.17.4",
-    "promise": "^8.0.1"
+    "promise": "^8.0.1",
+    "snyk": "^1.316.1"
   },
   "browserify": {
     "transform": [
@@ -49,5 +52,6 @@
   },
   "engines": {
     "node": ">=4"
-  }
+  },
+  "snyk": true
 }
